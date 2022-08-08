@@ -23,6 +23,7 @@ import io
 import threading
 
 road=os.path.abspath(__file__).split('Combine.py')[0]
+icon_road=road+'/icon/'
 music_location=road+'/music/'
 picture_location=road+'/picture/'
 url='' #讀取到的網址
@@ -318,7 +319,7 @@ def download_window():
     NoImage_ch.grid(row=2,column=0,pady=(5,0))
 
     #主介面按鈕
-    tem=Image.open(road+'/exit.png') 
+    tem=Image.open(icon_road+'/exit.png') 
     tem=tem.resize((75, 75), Image.ANTIALIAS)
     Exit_img=ImageTk.PhotoImage(tem)
 
@@ -545,7 +546,7 @@ def play_window():
             pause = True
             stop_time=duration['value']
             pygame.mixer.music.pause()
-            tem=Image.open(road+'/Play.png') 
+            tem=Image.open(icon_road+'/Play.png') 
             tem=tem.resize((50, 50), Image.ANTIALIAS)
             Play_img=ImageTk.PhotoImage(tem)
             pause_Button.configure(image=Play_img)
@@ -553,7 +554,7 @@ def play_window():
         else:
             pause = False
             pygame.mixer.music.unpause()
-            tem=Image.open(road+'/pause.png') 
+            tem=Image.open(icon_road+'/pause.png') 
             tem=tem.resize((50, 50), Image.ANTIALIAS)
             pause_img=ImageTk.PhotoImage(tem)
             pause_Button.configure(image=pause_img)
@@ -583,7 +584,7 @@ def play_window():
         if(pause==True):
             pause=False
             reset=True
-            tem=Image.open(road+'/pause.png') 
+            tem=Image.open(icon_road+'/pause.png') 
             tem=tem.resize((50, 50), Image.ANTIALIAS)
             pause_img=ImageTk.PhotoImage(tem)
             pause_Button.configure(image=pause_img)
@@ -691,7 +692,7 @@ def play_window():
         global loop
         if(loop==True):
             loop=False
-            tem=Image.open(road+'/loop_off.png') 
+            tem=Image.open(icon_road+'/loop_off.png') 
             tem=tem.resize((40, 40), Image.ANTIALIAS)
             loop_img=ImageTk.PhotoImage(tem)
             loop_Button.configure(image=loop_img)
@@ -699,7 +700,7 @@ def play_window():
             Hint()
         else:
             loop=True
-            tem=Image.open(road+'/loop_on.png') 
+            tem=Image.open(icon_road+'/loop_on.png') 
             tem=tem.resize((40, 40), Image.ANTIALIAS)
             loop_img=ImageTk.PhotoImage(tem)
             loop_Button.configure(image=loop_img)
@@ -739,7 +740,7 @@ def play_window():
 
 
     #上一首歌的按鈕
-    tem=Image.open(road+'/Back.png') 
+    tem=Image.open(icon_road+'/Back.png') 
     tem=tem.resize((50, 50), Image.ANTIALIAS)
     Back_img=ImageTk.PhotoImage(tem)
 
@@ -749,7 +750,7 @@ def play_window():
     Back_Button.image=Back_img #keep a reference
 
     #暫停&播放的按鈕
-    tem=Image.open(road+'/pause.png') 
+    tem=Image.open(icon_road+'/pause.png') 
     tem=tem.resize((50, 50), Image.ANTIALIAS)
     pause_img=ImageTk.PhotoImage(tem)
 
@@ -759,7 +760,7 @@ def play_window():
     pause_Button.image=pause_img #keep a reference
 
     #下一首歌的按鈕
-    tem=Image.open(road+'/Next.png') 
+    tem=Image.open(icon_road+'/Next.png') 
     tem=tem.resize((50, 50), Image.ANTIALIAS)
     Next_img=ImageTk.PhotoImage(tem)
 
@@ -770,7 +771,7 @@ def play_window():
 
 
     #主介面按鈕
-    tem=Image.open(road+'/exit.png') 
+    tem=Image.open(icon_road+'/exit.png') 
     tem=tem.resize((75, 75), Image.ANTIALIAS)
     Exit_img=ImageTk.PhotoImage(tem)
 
@@ -782,7 +783,7 @@ def play_window():
 
 
     #隨機播放按鈕
-    tem=Image.open(road+'/shuffle.png') 
+    tem=Image.open(icon_road+'/shuffle.png') 
     tem=tem.resize((40, 40), Image.ANTIALIAS)
     random_img=ImageTk.PhotoImage(tem)
 
@@ -792,7 +793,7 @@ def play_window():
     random_Button.image=random_img #keep a reference
 
     #循環播放按鈕
-    tem=Image.open(road+'/loop_off.png') 
+    tem=Image.open(icon_road+'/loop_off.png') 
     tem=tem.resize((40, 40), Image.ANTIALIAS)
     loop_img=ImageTk.PhotoImage(tem)
 
@@ -907,7 +908,7 @@ def home():
     l.grid(row=2,column=1,padx=(105,0),pady=(5,0),sticky='S')
 
     #介面切換按鈕
-    tem=Image.open(road+'/music.png') 
+    tem=Image.open(icon_road+'/music.png') 
     tem=tem.resize((75, 75), Image.ANTIALIAS)
     Play_img=ImageTk.PhotoImage(tem)
 
@@ -916,7 +917,7 @@ def home():
     Play_Button.configure(image=Play_img)
     Play_Button.image=Play_img #keep a reference
 
-    tem=Image.open(road+'/download.png') 
+    tem=Image.open(icon_road+'/download.png') 
     tem=tem.resize((75, 75), Image.ANTIALIAS)
     dl_img=ImageTk.PhotoImage(tem)
 
