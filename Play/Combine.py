@@ -11,7 +11,6 @@ import time
 import sys ; sys.setrecursionlimit(sys.getrecursionlimit() * 5)
 import re
 ######
-# Youtube的api key: AIzaSyDmwM77hcEW0XgPg-NUJAgpCjxMJ8PLpf4
 from moviepy.editor import AudioFileClip
 from tkinter.ttk import Progressbar
 from tkinter import ttk
